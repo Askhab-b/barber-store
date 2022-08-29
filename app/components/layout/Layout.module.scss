@@ -1,0 +1,43 @@
+$bar-width: 20%;
+
+.layout {
+  @apply relative;
+
+  > div:first-child,
+  > div:last-child,
+  .center {
+    @apply fixed top-0 bottom-0 overflow-y-scroll;
+  }
+
+  > div:first-child,
+  > div:last-child {
+    width: $bar-width;
+    max-width: 350px;
+  }
+  .center {
+    @apply min-h-screen p-layout w-3/5;
+    margin: 0 $bar-width;
+  }
+
+  > div:first-child {
+    @apply left-0;
+  }
+  > div:last-child {
+    @apply right-0;
+  }
+  .center::-webkit-scrollbar-track,
+  > div:first-child::-webkit-scrollbar-track,
+  > div:last-child::-webkit-scrollbar-track {
+    @apply border border-gray-900 py-0.5 bg-gray-800;
+  }
+  .center::-webkit-scrollbar,
+  > div:first-child::-webkit-scrollbar,
+  > div:last-child::-webkit-scrollbar {
+    @apply w-1;
+  }
+  /* .center::-webkit-scrollbar-thumb, */
+  > div:first-child::-webkit-scrollbar-thumb,
+  > div:last-child::-webkit-scrollbar-thumb {
+    @apply rounded-lg bg-gray-700 shadow-sm;
+  }
+}
