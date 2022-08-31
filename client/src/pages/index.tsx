@@ -1,7 +1,10 @@
 import type { GetServerSideProps } from 'next';
-import { HomePageProps } from '../typings';
 import Head from 'next/head';
 import { getMongo } from '@/config/api.config';
+interface HomePageProps {
+  tests: any[];
+  isConnected: boolean;
+}
 
 const Home = ({ isConnected, tests }: HomePageProps) => {
   console.log({ tests, isConnected });

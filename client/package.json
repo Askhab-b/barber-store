@@ -3,7 +3,6 @@
   "version": "1.0.0", 
   "description": "mxns",
   "private": true,
-  "main": "index.js",
   "author": "Coffee with Urbech",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
